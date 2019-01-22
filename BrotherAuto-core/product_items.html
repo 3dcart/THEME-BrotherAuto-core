@@ -1,0 +1,24 @@
+<div class="product-item" data-catalogid="[catalogid]" data-ajaxcart="1" data-addcart-callback="addcart_callback" data-categoryid="[cat_id]">
+    <div class="img">
+        <a href="product.asp?itemid=[catalogid]">
+            <img src="[THUMBNAIL]" alt="[name]" class="img-responsive" />
+        </a>
+        <!--START: quickview-->
+        <button class="quickview" data-toggle="modal">[product_quick-view]</button>
+        <!--END: quickview-->
+    </div>
+    <div class="name">
+        <a href="product.asp?itemid=[catalogid]">[name]</a>
+    </div>
+
+    <div class="price">
+        <!--START: ITEMPRICE-->
+        <span class="regular-price">[ITEMPRICE]</span>
+        <!--END: ITEMPRICE-->
+        <!--START: SALEPRICE-->
+        <del class="regular-price">[ITEMPRICE]</del>
+        <span class="sale-price">[ITEMSALEPRICE]</span>
+        <span class="on-sale-badge">[product_sale]</span>
+        <!--END: SALEPRICE-->
+    </div>
+</div>
