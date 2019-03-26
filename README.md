@@ -1,4 +1,4 @@
-# 3dcart Premium Theme: BrotherAuto-core
+# 3dcart Free Theme: BrotherAuto-core
 
 ## Installation
 
