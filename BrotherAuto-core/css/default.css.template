@@ -2,7 +2,7 @@
 ** Bootstrap over-rides
 */
 a {
-    color: #ff895b;
+    color: #[primary-accent];
 }
 input[type="text"]:focus{
     outline: 0;
@@ -18,7 +18,6 @@ input:focus:-moz-placeholder {
 input:focus::-moz-placeholder {
   color: transparent;
 }
-
 
 input[type="radio"] {
 position: absolute;
@@ -55,7 +54,7 @@ border-color: #000;
     width: 7px;
     height: 7px;
     margin: 3px;
-    background-color: #FF6224;
+    background-color: #[primary-accent];
 }
 input:checked + .side-label::after {
 display: block;
@@ -65,9 +64,9 @@ display: block;
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: #000;
+    color: #[body_text_color];
     line-height: 1.5;
-    background: #f6f6f6;
+    background: #[body-bg];
 }
 h1 {
     font-size: 30px;
@@ -87,7 +86,7 @@ h1 {
     padding: 0 0 30px;
 }
 .subcategories > ul > li > a {
-    color: #000;
+    color: #[body_text_color];
     text-decoration: none;
     display: block;
     -webkit-transition: all .25s ease-out;
@@ -97,7 +96,7 @@ h1 {
     opacity: 0.8;
 }
 .subcategories > ul > li span.name {
-    color: #000;
+    color: #[body_text_color];
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
@@ -130,34 +129,33 @@ h1 {
     font-size: 14px;
     font-weight: 300;
     color: #000;
-    text-transform: uppercase;
 }
 .btn-default,
 .btn-primary:focus, 
 .btn-primary:active:focus {
-    border-color: #000;
-    background-color: #000;
-    color: #fff;
+    border-color: #[primary-btn-border];
+    background-color: #[primary-btn-bg];
+    color: #[primary-btn-text];
 }
 .btn-default:hover,
 .btn-default:focus,
 .btn-default:hover:focus,
 .btn-default.focus {
-    color: #fff;
-    background-color: #000;
-    border-color: #000;
+    color: #[primary-btn-text-hover];
+    background-color: #[primary-btn-bg-hover];
+    border-color: #[primary-btn-border-hover];
 }
 .btn-default.btn-inverse,
 .btn-primary {
-    color: #fff;
-    background-color: #ff895b;
-    border-color: #ff895b;
+    color: #[secondary-btn-text];
+    background-color: #[secondary-btn-bg];
+    border-color: #[secondary-btn-border];
 }
 .btn-default.btn-inverse:hover,
 .btn-primary:hover {
-    color: #fff;
-    background-color: #000;
-    border-color: #000;
+    color: #[secondary-btn-text-hover];
+    background-color: #[secondary-btn-bg-hover];
+    border-color: #[secondary-btn-border-hover];
     opacity: 0.8;
 }
 .product-item .img .quickview {
@@ -170,8 +168,8 @@ h1 {
     width: 120px;
     height: 36px;
     opacity: 0;
-    color: #fff;
-    background-color: #ff895b;
+    color: #[secondary-btn-text];
+    background-color: #[secondary-btn-bg];
     border: none;
     z-index: 1;
     -webkit-box-shadow: none;
@@ -182,7 +180,7 @@ h1 {
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: #ff895b;
+    background-color: #[primary-accent];
     color: #fff;
     font-size: 20px;
     text-transform: uppercase;
@@ -211,12 +209,12 @@ h1 {
     margin-bottom: 0;
     border: none;
     background: none;
-    border-top: 1px solid #e0e1e1;
+    border-top: 1px solid #[secondary-accent];
     text-align: center;
 }
 .navbar-inverse .navbar-nav > li > a {
-    color: #000;
-    font-size: 16px;
+    color: #[navigation-text-color];
+    font-size: [navigation-font-size]px;
     font-weight: 400;
     display: block;
     padding: 0 3px 10px 3px;
@@ -234,12 +232,12 @@ h1 {
     display: inline-block;
     padding: 0 0 10px;
     line-height: 20px;
-    border-bottom: 1px solid #ff895b;
+    border-bottom: 1px solid #[navigation-text-hover-color];
 }
 
 .navbar-inverse .navbar-nav > li > a:hover, 
 .navbar-inverse .navbar-nav > li > a:focus {
-    color: #ff895b;
+    color: #[navigation-text-hover-color];
     background: none;
 }
 .dropdown-menu > li > a {
@@ -320,7 +318,7 @@ h1 {
     opacity: 0.6;
 }
 .top-nav {
-    background: #231f20;
+    background: #[menu-bg];
     padding: 5px 0;
 }
 .top-nav .useraccount ul {
@@ -334,7 +332,7 @@ h1 {
     text-transform: uppercase;
     font-weight: 300;
     text-align: center;
-    color: #fff;
+    color: #[top_nav-text-color];
     display: inline-flex;
 }
 .top-nav .useraccount ul li {
@@ -345,7 +343,7 @@ h1 {
 }
 .top-nav .useraccount ul li:first-child:after {
     content: "/";
-    color: #fff;
+    color: #[top_nav-text-color];
     padding: 0 5px;
 }
 .top-nav ul {
@@ -369,12 +367,12 @@ h1 {
     padding: 0;
 }
 .top-nav ul li a {
-    color: #fff;
+    color: #[top_nav-text-color];
     text-decoration: none;
 
 }
 .top-nav ul li a:hover {
-    color: #ccc;
+    color: #[top_nav-text-color-hover];
 }
 .site-header {
     padding: 30px 0;
@@ -417,7 +415,7 @@ h1 {
     color: #fff;
 }
 .breadcrumnb ol li > a {
-    color: #ff895b;
+    color: #[primary-accent];
     text-decoration: none;
 }
 .breadcrumnb ol li > a:hover {
@@ -481,13 +479,13 @@ span.cart-count {
     text-transform: capitalize;
 }
 .site-footer {
-    background: none;
+    background: #[footer-bg];
     padding: 0;
-    color: #fff;
+    color: #[footer-text-color];
 }
 .site-footer .holder {
     padding: 13px 0 40px;
-    border-top: 1px solid #ff895b;
+    border-top: 1px solid #[primary-accent];
 }
 .extrapages {
     max-width: 250px;
@@ -496,7 +494,7 @@ span.cart-count {
 } 
 .extrapages:before {
     content: " ";
-    border-left: 1px solid #ff895b;
+    border-left: 1px solid #[primary-accent];
     width: 1px;
     height: 100%;
     position: absolute;
@@ -512,7 +510,7 @@ ul.extrapages li {
     margin: 0 0 10px;
 }
 ul.extrapages li a {
-    color: #000;
+    color: #[footer-links-color];
     text-decoration: none;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -521,7 +519,7 @@ ul.extrapages li a {
     font-weight: 400;
 }
 ul.extrapages li a:hover {
-    color: #ff895b;
+    color: #[footer-links-color-hover];
 }
 .footer-social {
     border-top: none;
@@ -553,7 +551,7 @@ ul.extrapages li a:hover {
     margin: 0 auto;
 }
 .mailist-box h3 {
-    color: #ff895b;
+    color: #[footer-links-color-hover];
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
@@ -564,7 +562,7 @@ ul.extrapages li a:hover {
     width: 100%;
     background: none;
     border: none;
-    border-bottom: 1px solid #ff895b;
+    border-bottom: 1px solid #[primary-accent];
     padding: 0 3px;
     font-size: 12px;
     color: #868686;
@@ -592,7 +590,7 @@ ul.extrapages li a:hover {
 }
 .btn-default.mailinglist-submit:hover, 
 .btn-default.mailinglist-submit:focus {
-    opacity: 0.6;
+    opacity: 0.8;
 }
 .mailinglist-response {
     display: none;
@@ -671,13 +669,13 @@ ul.social-icons li.social-icons-label {
 .reviews-stars:before {
     font-family: "fontello";
     content: "\e803 \e803 \e803 \e803 \e803";
-    color: #b8b8b8;
+    color: #[stars-default-color];
 }
 .rating:hover .rating-star:hover,
 .rating:hover .rating-star:hover ~ .rating-star,
 .rating-input:checked ~ .rating-star,
 .reviews-stars {
-    color: #000;
+    color: #[stars-active-color];
 }
 .relatedBlock .price,
 .relatedBlock .name,
@@ -693,12 +691,12 @@ section#home .product-item .name {
     text-align: center;
 }
 .product-item .name a {
-    color: #000;
+    color: #[body_text_color];
     font-size: 16px;
     text-decoration: none;
 }
 .product-item .name a:hover {
-    color: #ff895b;
+    color: #[primary-accent];
     font-size: 16px;
 }
 .product-item del.regular-price {
@@ -708,7 +706,7 @@ section#home .product-item .name {
 .sale-price {
     font-size: 20px;
     font-weight: 300;
-    color: #878787;
+    color: #[sale-color];
 }
 del.original-price {
     font-weight: 500;
@@ -768,12 +766,12 @@ section#home .product-item .reviews {
     min-width: 150px;
 }
 .head-mobile-nav > a {
-    color: #000;
+    color: #[body_text_color];
     font-size: 24px;
     line-height: 1;
 }
 .head-mobile-nav > a:hover {
-    color: #ff895b;
+    color: #[primary-accent];
 }
 .navbar-inverse .navbar-toggle {
     background: #333333;
@@ -820,7 +818,7 @@ section#home .product-item .reviews {
 }
 .extrapages-shower a {
     display: block;
-    background-color: #ff895b;
+    background-color: #[primary-accent];
     color: #fff;
     padding: 10px 18px;
     text-decoration: none !important;
