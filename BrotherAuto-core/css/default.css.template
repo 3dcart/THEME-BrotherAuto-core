@@ -2,13 +2,11 @@
 ** Bootstrap over-rides
 */
 
-html, body {
-  height: 100%;
-}
 body {
   display: flex;
   height: 100%;
   flex-direction: column;
+	min-height: 100vh;
 }
 .page-content {
   flex: 1 0 auto;
@@ -16,7 +14,23 @@ body {
 footer {
   flex-shrink: 0;
 }
-
+.product-item .reviews {
+    text-align: center;
+}
+.product-items.productList .product-item .name,
+.product-items.productList .product-item .reviews,
+.product-items.productList .product-item .price,
+.product-items.productList .product-item .status,
+.product-items.productList .product-item .action,
+.product-items.productList .product-item .product-content{
+    text-align: left;
+}
+.product-items.productList .product-item .img a {
+    position: initial;
+}
+.homepage-blog-posts .post-image-container img {
+    height: 200px;
+}
 a {
     color: #[primary-accent];
 }
