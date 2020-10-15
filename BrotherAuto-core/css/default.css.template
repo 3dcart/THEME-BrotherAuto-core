@@ -48,7 +48,22 @@ input:focus:-moz-placeholder {
 input:focus::-moz-placeholder {
   color: transparent;
 }
-
+#skip a
+{
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;color: #000;
+}
+ 
+#skip a:focus
+{
+position:static;
+width:auto;
+height:auto;
+}
 input[type="radio"] {
 position: absolute;
 left: -9999px;
@@ -211,8 +226,8 @@ h1 {
     bottom: 0;
     right: 0;
     background-color: #[primary-accent];
-    color: #fff;
-    font-size: 20px;
+    color: #000;
+    font-size: 17px;
     text-transform: uppercase;
     padding: 1px 12px;
     line-height: 33px;
@@ -667,6 +682,7 @@ ul.social-icons li.social-icons-label {
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     margin-right: 0px;
+	color:#000;
 }
 
 .social-icons {
@@ -731,10 +747,10 @@ section#home .product-item .name {
 }
 .product-item del.regular-price {
     text-decoration: line-through;
-    font-size: 20px;
+    font-size: 17px;
 }
 .sale-price {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 300;
     color: #[sale-color];
 }
@@ -756,9 +772,9 @@ section.category-products .product-item .price {
     text-align: center;
 }
 section#home .product-item .price {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 300;
-    color: #878787;
+    color: #4d4d4d;
     text-align: center;
 }
 section#home .product-item .reviews {
@@ -812,11 +828,11 @@ section#home .product-item .reviews {
 .products-section {
     padding: 30px 0;
 }
-.products-section h2 {
+.products-section h2,.products-section h1 {
     margin: 0;
     font-size: 24px;
 }
-.products-section h2 {
+.products-section h2,.products-section h1 {
     margin-top: 20px;
     margin-bottom: 50px;
     line-height: 1;
