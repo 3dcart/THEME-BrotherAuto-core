@@ -880,6 +880,10 @@ section#home .product-item .reviews {
 .extrapages-shower a.collapsed:after {
     content: "\f107";
 }
+.wcag {
+    text-align: left;
+    margin-top: 20px;
+}
 @media(max-width: 1023px) {
     .navbar-inverse .navbar-nav > li > a {
         font-size: 14px;
@@ -906,6 +910,9 @@ section#home .product-item .reviews {
     .navbar-nav > li {
         margin: 0 10px;
     }
+	.wcag {
+		text-align: center;
+	}
 }
 @media(max-width: 767px) {
     .justify-center {
