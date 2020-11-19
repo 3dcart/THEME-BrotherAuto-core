@@ -64,7 +64,7 @@ position:static;
 width:auto;
 height:auto;
 }
-input[type="radio"] {
+.mailist-box input[type="radio"] {
 position: absolute;
 left: -9999px;
 }
