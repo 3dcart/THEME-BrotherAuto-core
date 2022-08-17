@@ -794,6 +794,7 @@ section#home .product-item .reviews {
     width: 100%;
     margin: 0 auto;
     vertical-align: middle;
+	overflow: visible;
 }
 .product-item .img a {
     display: block;
