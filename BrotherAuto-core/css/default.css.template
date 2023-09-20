@@ -254,7 +254,7 @@ h1 {
     margin-bottom: 0;
     border: none;
     background: none;
-    border-top: 1px solid #[secondary-accent];
+    border-top: 1px solid #e0e1e1;
     text-align: center;
 }
 .navbar-inverse .navbar-nav > li > a {
