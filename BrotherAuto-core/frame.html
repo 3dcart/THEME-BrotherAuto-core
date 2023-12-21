@@ -15,17 +15,44 @@
     <link rel="alternate" type="application/rss+xml" title="Latest Blog Posts (RSS 2.0)" href="[store_url]/rss.asp?type=blog" />
     <!--END: FRAME_RSSFEEDS-->
 
-    <!--START: page_styles-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <link rel="stylesheet" href="assets/templates/common-core/lib/bootstrap/css/bootstrap.css" type="text/css" />
-    <link rel="StyleSheet" href="assets/templates/common-core/css/core.css" type="text/css" />
+	<!--START: page_styles-->
+	<link
+        rel="preload stylesheet"
+        href="assets/templates/common-core/lib/bootstrap/css/bootstrap.css"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+        <link
+            href="assets/templates/common-core/lib/bootstrap/css/bootstrap.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </noscript>
+    <link rel="preload stylesheet" href="assets/templates/common-core/css/core.css" type="text/css" as="style" />
     [page_styles]
-    <link rel="StyleSheet" href="assets/templates/[template]/css/[stylesheet]" type="text/css" />
-    <!--END: page_styles-->
+    <link
+        rel="preload stylesheet"
+        href="assets/templates/[template]/css/[stylesheet]"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+        <link
+            href="assets/templates/[template]/css/[stylesheet]"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </noscript>
+	<!--END: page_styles-->
 
 </head>
 <body class="[body_class]" data-currency="[currency_symbol]" data-decimal="[decimal_places]">
-	<div id="skip"><a href="#navbar">Skip to Main Content</a></div>
+	<div id="skip">
+        <a href="#site-header">Skip to Header</a>
+        <a href="#page-content">Skip to Main Content</a>
+        <a href="#site-footer">Skip to Footer</a>
+    </div>
     <section class="top-nav">
         <div class="container">
             <div class="row">
@@ -49,7 +76,7 @@
                         <form method="get" name="searchForm" action="search.asp" role="search">
                             <div class="search-form">
                                 <input type="text" id="searchlight" name="keyword" value="" placeholder="[frame_search]" class="search-text form-control" aria-label="search input" />
-                                <button type="submit" class="search-submit btn btn-default btn-inverse" aria-label="search button"><img src="assets/templates/[template]/images/search.png" alt="search"></button>
+                                <button type="submit" class="search-submit btn btn-default btn-inverse" aria-label="search button"><img src="assets/templates/[template]/images/search.png" alt="search" width="20" height="20"></button>
                             </div>
                         </form>
                         <div class="clear"></div>
@@ -76,7 +103,7 @@
                         <div class="minicart hidden-xs">
                             <a href="view_cart.asp" class="minicart-inner clearfix">
                                 <!-- <span class="icon-basket cart-icon"></span> -->
-                                <img class="cart-icon" src="assets/templates/[template]/images/cart.png" alt="cart icon">
+                                <img class="cart-icon" src="assets/templates/[template]/images/cart.png" alt="cart icon" width="23" height="21">
                                 <span class="cart-details">
                                     <!-- <span class="cart-title">[frame_shopping-cart-text]</span> -->
                                     <span class="cart-count"><span class="minicart-items">[ITEMSINCART]</span> [frame_ITEMSINCART-text] - <span class="minicart-subtotal">[SUBTOTAL]</span></span>
@@ -102,7 +129,7 @@
         </div>
     </section>
 
-    <header class="site-header">
+    <header class="site-header" id="site-header">
         <div class="container">
             <div class="row">
                 <div class="col-xs-3 visible-xs text-left head-mobile-nav">
@@ -166,11 +193,13 @@
     </section>
 
     <!--Get current page template-->
-    [page_content]
+    <div id="page-content">
+        [page_content]
+    </div>
     <!--/Get current page template-->
 
     <!-- FOOTER -->
-    <footer class="site-footer">
+    <footer class="site-footer" id="site-footer">
         <div class="container">
 
             <div class="row">
@@ -178,33 +207,33 @@
                 
                 <div class="col-md-4">
                     <!--START: social_icons-->
-                    <ul class="social-icons list-unstyled list-inline">
-                        <li class="social-icons-label hidden-md hidden-sm hidden-xs">[frame_social-icons-heading]</li>
-                        <!--START: social_link_facebook-->
-                        <li><a href="[social_link_facebook_url]" class="facebook" target="_blank" title="Like Us on Facebook" aria-label="Like Us on Facebook"><img src="assets/templates/[template]/images/facebook.png" alt="facebook"></a></li>
-                        <!--END: social_link_facebook-->
-                        <!--START: social_link_twitter-->
-                        <li><a href="[social_link_twitter_url]" class="twitter" target="_blank" title="Follow Us on Twitter" aria-label="Follow Us on Twitter"><img src="assets/templates/[template]/images/twitter.png" alt="twitter"></a></li>
-                        <!--END: social_link_twitter-->
-                        <!--START: social_link_googleplus-->
-                        <li><a href="[social_link_googleplus_url]" class="gplus" target="_blank" title="Follow Us on Google+" aria-label="Follow Us on Google+"><img src="assets/templates/[template]/images/gplus.png" alt="gplus"></a></li>
-                        <!--END: social_link_googleplus-->
-                        <!--START: social_link_youTube-->
-                        <li><a href="[social_link_youTube_url]" class="youtube" target="_blank" title="Subscribe to our Channel" aria-label="Subscribe to our Channel"><img src="assets/templates/[template]/images/youtube.png" alt="youtube"></a></li>
-                        <!--END: social_link_youTube-->
-                        <!--START: social_link_pinterest-->
-						<li><a href="[social_link_pinterest_url]" class="pinterest" target="_blank" title="Follow Us on Pinterest" aria-label="Follow Us on Pinterest"><span class="icon-pinterest" role="presentation"></span></a></li>
-						<!--END: social_link_pinterest-->
-						<!--START: social_link_instagram-->
-						<li><a href="[social_link_instagram_url]" class="instagram" target="_blank" title="Follow Us on Instagram" aria-label="Follow Us on Instagram"><span class="icon-instagram" role="presentation"></span></a></li>
-						<!--END: social_link_instagram-->
-						<!--START: social_link_tumblr-->
-						<li><a href="[social_link_tumblr_url]" class="tumblr" target="_blank" title="Follow Us on Tumblr" aria-label="Follow Us on Tumblr"><span class="icon-tumblr" role="presentation"></span></a></li>
-						<!--END: social_link_tumblr-->
-						<!--START: social_link_blog-->
-						<li><a href="[social_link_blog_url]" class="blog" target="_blank" title="Subscribe to our Blog" aria-label="Subscribe to our Blog"><span class="icon-rss" role="presentation"></span></a></li>
-						<!--END: social_link_blog-->
-                    </ul>
+                        <ul class="social-icons list-unstyled list-inline">
+                            <li class="social-icons-label hidden-md hidden-sm hidden-xs">[frame_social-icons-heading]</li>
+                            <!--START: social_link_facebook-->
+                            <li><a href="[social_link_facebook_url]" class="facebook" target="_blank" title="Like Us on Facebook"><span class="icon-facebook"></span></a></li>
+                            <!--END: social_link_facebook-->
+                            <!--START: social_link_twitter-->
+                            <li><a href="[social_link_twitter_url]" class="twitter" target="_blank" title="Follow Us on Twitter"><span class="icon-twitter"></span></a></li>
+                            <!--END: social_link_twitter-->
+                            <!--START: social_link_googleplus-->
+                            <li><a href="[social_link_googleplus_url]" class="gplus" target="_blank" title="Follow Us on Google+"><span class="icon-gplus"></span></a></li>
+                            <!--END: social_link_googleplus-->
+                            <!--START: social_link_youTube-->
+                            <li><a href="[social_link_youTube_url]" class="youtube" target="_blank" title="Subscribe to our Channel"><span class="icon-youtube"></span></a></li>
+                            <!--END: social_link_youTube-->
+                            <!--START: social_link_pinterest-->
+                            <li><a href="[social_link_pinterest_url]" class="pinterest" target="_blank" title="Follow Us on Pinterest"><span class="icon-pinterest"></span></a></li>
+                            <!--END: social_link_pinterest-->
+                            <!--START: social_link_instagram-->
+                            <li><a href="[social_link_instagram_url]" class="instagram" target="_blank" title="Follow Us on Instagram"><span class="icon-instagram"></span></a></li>
+                            <!--END: social_link_instagram-->
+                            <!--START: social_link_tumblr-->
+                            <li><a href="[social_link_tumblr_url]" class="tumblr" target="_blank" title="Follow Us on Tumblr"><span class="icon-tumblr"></span></a></li>
+                            <!--END: social_link_tumblr-->
+                            <!--START: social_link_blog-->
+                            <li><a href="[social_link_blog_url]" class="blog" target="_blank" title="Subscribe to our Blog"><span class="icon-rss"></span></a></li>
+                            <!--END: social_link_blog-->
+                        </ul>
                     <!--END: social_icons-->
                 </div>
                 
@@ -248,7 +277,7 @@
                     <ul id="extrapages" class="list-unstyled row extrapages" role="menu">
                         <!--START: LINKS-->
                         <!--START: LINK_FORMAT-->
-                        <li class="col-sm-6"><a href="infopage.asp?page=[link_id]&extra=1" target="[link_target]" class="menu-bottom" role="menuitem">[link_name]</a></li>
+                        <li class="col-sm-6" role="menuitem"><a href="infopage.asp?page=[link_id]&extra=1" target="[link_target]" class="menu-bottom">[link_name]</a></li>
                         <!--END: LINK_FORMAT-->
                         <!--END: LINKS-->
                     </ul>
@@ -295,21 +324,59 @@
     [quickview_modal]
     <!--END: quickview_modal-->
     
-    <link rel="stylesheet" href="assets/templates/common-core/lib/fontello/css/fontello.min.css" type="text/css" />
-    <link rel="stylesheet" href="assets/templates/common-core/lib/fontello/css/animation.css" type="text/css" />
+    <link
+        rel="preload stylesheet"
+        href="assets/templates/common-core/lib/fontello/css/fontello.min.css"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+        <link
+            href="assets/templates/common-core/lib/fontello/css/fontello.min.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </noscript>
+    <link
+        rel="preload stylesheet"
+        href="assets/templates/common-core/lib/fontello/css/animation.css"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+        <link
+            href="assets/templates/common-core/lib/fontello/css/animation.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </noscript>
     
     <!--START: page_scripts-->
-    <script src='assets/templates/common-core/lib/jquery.min.js'></script>
-	<script src='assets/templates/common-core/lib/jquery-migrate-3.0.1.min.js'></script>
-    <script src="assets/templates/common-core/lib/bootstrap/js/bootstrap.js"></script>
-    <script src="assets/templates/common-core/js/core.js"></script>
-    <script src="assets/templates/[template]/js/main.js"></script>
+    <script src="assets/templates/common-core/lib/jquery.min.js"></script>
+    <script src="assets/templates/common-core/lib/jquery-migrate-3.0.1.min.js" defer="defer"></script>
+    <script src="assets/templates/common-core/lib/bootstrap/js/bootstrap.js" defer="defer"></script>
+    <script src="assets/templates/common-core/js/core.js" defer="defer"></script>
+    <script src="assets/templates/[template]/js/main.js" defer="defer"></script>
     [page_scripts]
     <!--END: page_scripts-->
 
     <!--START: quicksearch-->
-    <link rel="stylesheet" href="assets/templates/common-core/quicksearch/quicksearch.css" type="text/css" media="screen" />
-    <script type="text/javascript" src="assets/templates/common-core/quicksearch/jquery.quicksearch.js"></script>
+    <link
+        rel="preload stylesheet"
+        href="assets/templates/common-core/quicksearch/quicksearch.css"
+        as="style"
+        media="screen"
+        onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+        <link
+            href="assets/templates/common-core/quicksearch/quicksearch.css"
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+        />
+    </noscript>
+    <script defer type="text/javascript" src="assets/templates/common-core/quicksearch/jquery.quicksearch.js"></script>
     <script type="text/javascript">
         jQuery(function () {
             jQuery('#searchlight').searchlight('/search_quick.asp');
@@ -317,36 +384,40 @@
     </script>
     <!--END: quicksearch-->
 
-<!--START: 3dcart stats-->
-<div class="stats hidden"> 
-    <script type="text/javascript">
-        //<![CDATA[
-        var file='/stats/count.asp';
-        var stats_d=new Date();
-        var stats_s=stats_d.getSeconds();
-        var stats_m=stats_d.getMinutes();
-        var stats_x=stats_s*stats_m;
-        var prdID = '[catalogid]';
-        var catID = '[catid]';
-        stats_f='' + escape(document.referrer); stats_f=stats_f.replace('_','----');
-        if (navigator.appName=='Netscape'){stats_b='NS';}
-        if (navigator.appName=='Microsoft Internet Explorer'){stats_b='MSIE';}
-        if (navigator.appVersion.indexOf('MSIE 3')>0) {stats_b='MSIE';}
-        stats_u='' + escape(document.URL); stats_u=stats_u.replace('_','----'); stats_w=screen.width; stats_h=screen.height;
-        stats_v=navigator.appName;
-        stats_fs = window.screen.fontSmoothingEnabled;
-        if (stats_v != 'Netscape') {stats_c=screen.colorDepth;}
-        else {stats_c=screen.pixelDepth;}
-        stats_j=navigator.javaEnabled();
-        info='w=' + stats_w + '&h=' + stats_h + '&c=' + stats_c + '&r=' + stats_f + '&u='+ stats_u + '&fs=' + stats_fs + '&b=' + stats_b + '&x=' + stats_x + '&cat=' + catID + '&prd=' + prdID;
-        document.write('<img src="' + file + '?'+info+ '" width="1" height="1" border="0" alt="stats" />');
-        //]]>
-    </script>
-    <noscript>
-        <img src="/stats/count.asp" width="90" height="30" alt="" />
-    </noscript>
-</div>
-<!--END: 3dcart stats-->
+    <!--START: 3dcart stats-->
+    <div id="3dStats" class="stats hidden"> 
+        <script async language="JavaScript" type="text/javascript">
+            var file='/stats/count.asp';
+            var stats_d=new Date(); 
+            var stats_s=stats_d.getSeconds(); 
+            var stats_m=stats_d.getMinutes();
+            var stats_x=stats_s*stats_m;
+            var prdID = '[catalogid]';
+            var catID = '[catid]';
+            var stImg = document.createElement('img');
+                stImg.Class
+                stImg.width = '1';
+                stImg.height = '1';
+                stImg.alt = "3dcart stats";
+
+            stats_f='' + escape(document.referrer); stats_f=stats_f.replace('_','----');
+            if (navigator.appName=='Netscape'){stats_b='NS';} 
+            if (navigator.appName=='Microsoft Internet Explorer'){stats_b='MSIE';} 
+            if (navigator.appVersion.indexOf('MSIE 3')>0) {stats_b='MSIE';}
+            stats_u='' + escape(document.URL); stats_u=stats_u.replace('_','----'); stats_w=screen.width; stats_h=screen.height; 
+            stats_v=navigator.appName; 
+            stats_fs = window.screen.fontSmoothingEnabled;
+            if (stats_v != 'Netscape') {stats_c=screen.colorDepth;}
+            else {stats_c=screen.pixelDepth;}
+            stats_j=navigator.javaEnabled();
+            info='w=' + stats_w + '&h=' + stats_h + '&c=' + stats_c + '&r=' + stats_f + '&u='+ stats_u + '&fs=' + stats_fs + '&b=' + stats_b + '&x=' + stats_x + '&cat=' + catID + '&prd=' + prdID;
+
+            stImg.src =file + '?' + info; 
+            document.getElementById('3dStats').appendChild(stImg);
+        </script>
+        <noscript><img src="/stats/count.asp" width="90" height="30" alt="3dcart stats" /> </noscript>
+    </div>
+    <!--END: 3dcart stats-->
     
 </body>
 </html>
